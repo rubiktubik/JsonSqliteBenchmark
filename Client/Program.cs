@@ -48,7 +48,7 @@ public class Downloader
         }
         Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
 
-        var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5026/Customer");
+        var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5022/Customer");
 
         var response = await _httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
         var stream = await response.Content.ReadAsStreamAsync();
